@@ -16,4 +16,13 @@ public class Binary4Bit{
   public boolean getDataAtIndex(int idx){
     return this.data[idx].getValue();
   }
+  
+  @Override
+  public String toString(){
+    String str="";
+    for(int i=0;i<this.data.length;i++){
+      str+=this.data[i];
+    }
+    return str;
+  }
 }
