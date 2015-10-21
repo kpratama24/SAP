@@ -20,4 +20,9 @@ public class Binary8Bit{
       return this.data[1].getDataAtIndex(idx+4);
     }
   }
+  
+  @Override
+  public String toString(){
+    return this.data[0]+" "+this.data[1];
+  }
 }
