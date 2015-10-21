@@ -1,8 +1,5 @@
 public class Binary4Bit{
   private Binary1Bit[] data;
-  public Binary4Bit(){
-    this.data={new Binary1Bit(false),new Binary1Bit(false),new Binary1Bit(false),new Binary1Bit(false)};
-  }
   
   public Binary4Bit(Binary1Bit[] data){
     this.data=data;
@@ -14,5 +11,9 @@ public class Binary4Bit{
   
   public void setData(Binary1Bit[] data){
     this.data=data;
+  }
+  
+  public boolean getDataAtIndex(int idx){
+    return this.data[idx].getValue();
   }
 }
