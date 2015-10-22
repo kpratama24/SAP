@@ -1,22 +1,13 @@
 /**
  * Kelas yang merepresentasikan 4 bit angka biner
  */
-public class Bit4{
+public class Bit4 extends Bit{
   
   /**
-   * array angka biner 1 bit berukuran 4
+   * Constructor kelas Bit4
+   * @param value string biner 4 bit
    */
-  private Bit1[] value;
-  
-  public Bit4(Bit1[] value){
-    this.value=value;
-  }
-  
-  public Bit1[] getValue(){
-    return this.value;
-  }
-  
-  public void setValue(Bit1[] value){
-    this.value=value;
+  public Bit4(String value){
+    super(value);
   }
 }
