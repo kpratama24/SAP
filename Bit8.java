@@ -1,22 +1,13 @@
 /**
  * Kelas yang merepresentasikan 8 bit angka biner
  */
-public class Bit8{
+public class Bit8 extends Bit{
   
   /**
-   * array angka biner 4 bit berukuran 2
+   * Constructor kelas Bit8
+   * @param value string biner 8 bit
    */
-  private Bit4[] value;
-  
-  public Bit8(Bit4[] value){
-    this.value=value;
-  }
-  
-  public Bit4[] getValue(){
-    return this.value;
-  }
-  
-  public void setValue(Bit4[] value){
-    this.value=value;
+  public Bit8(String value){
+    super(value);
   }
 }
