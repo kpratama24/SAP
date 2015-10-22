@@ -27,9 +27,4 @@ public class Bit{
   public String toBinary(int val){
     return val+"";
   }
-  
-  @Override
-  public String toString(){
-    return this.getValue();
-  }
 }
