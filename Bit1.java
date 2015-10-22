@@ -29,4 +29,9 @@ public class Bit1 implements Converter{
   public String decimalToBinary(int val){
     return val+"";
   }
+  
+  @Override
+  public String toString(){
+    return val+"";
+  }
 }
