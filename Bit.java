@@ -6,7 +6,7 @@ public class Bit{
   /**
    * Nilai yang direpresentasikan dengan biner 1 bit
    */
-  private String value;
+  protected String value;
   
   public Bit(String value){
     this.value=value;
