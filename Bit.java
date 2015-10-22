@@ -10,9 +10,19 @@ public class Bit{
   
   /**
    * Constructor kelas Bit
+   * @param bilangan biner sebagai data
    */
   public Bit(String value){
     this.value=value;
+  }
+  
+  /**
+   * Constructor kelas Bit
+   * @param value bilangan desimal sebagai data
+   * @param bitLength panjang bit bilangan biner
+   */
+  public Bit(int value,int bitLength){
+    this.value=this.toBinary(value,bitLength);
   }
   
   /**
