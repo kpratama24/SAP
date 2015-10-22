@@ -10,4 +10,12 @@ public class Bit8 extends Bit{
   public Bit8(String value){
     super(value);
   }
+  
+  /**
+   * Constructor kelas Bit8
+   * @param value bilangan desimal sebagai data 8 bit
+   */
+  public Bit8(int value){
+    super(value,8);
+  }
 }
