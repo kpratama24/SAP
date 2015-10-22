@@ -8,7 +8,7 @@ public class Bit4{
    */
   private Bit1[] value;
   
-  public Bit4(Bit1 value){
+  public Bit4(Bit1[] value){
     this.value=value;
   }
   
