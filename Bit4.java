@@ -10,4 +10,12 @@ public class Bit4 extends Bit{
   public Bit4(String value){
     super(value);
   }
+  
+  /**
+   * Constructor kelas Bit4
+   * @param value bilangan desimal sebagai data 4 bit
+   */
+  public Bit4(int value){
+    super(value,4);
+  }
 }
