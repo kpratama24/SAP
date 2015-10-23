@@ -12,11 +12,13 @@ public class SAPSimulator{
   
   public SAPSimulator(String[] memory){
     // create objects for registers
-    
+    pc=new ProgramCounter();
     ram=new RandomAccessMemory(memory);
   }
   
   public void start(){
     // simulation
+    
+    // Initial state - T0
   }
 }
