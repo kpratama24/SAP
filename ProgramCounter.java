@@ -1,38 +1,38 @@
 /**
- * Kelas yang merepresentasikan program counter
+ * Class that represent counter of program
  */
 public class ProgramCounter{
   
   /**
-   * Nilai counter saat ini
+   * Display the current counter value
    */
   private int count;
   
   /**
-   * Constructor kelas ProgramCounter
+   * ProgramCounter Class Constructor
    */
   public ProgramCounter(){
     this.count=0;
   }
   
   /**
-   * Method untuk menambah nilai counter saat ini
+   * Method to add the counter
    */
   public void countUp(){
     this.count++;
   }
   
   /**
-   * Method untuk mengatur counter saat ini
-   * @param nilai counter yang baru
+   * Method for setting a new counter value based on user input
+   * @param new counter value
    */
   public void setCount(int count){
     this.count=count;
   }
   
   /**
-   * Method untuk melihat nilai counter saat ini
-   * @return nilai counter saat ini dalam bilangan biner 4 bit
+   * Method for getting the current counter
+   * @return current counter value in a form of 4Bit number
    */
   public String getCount(){
     return (new Bit4(this.count)).getValue();
