@@ -1,10 +1,14 @@
 
 public class ControlUnitSequencer{
   
+  // Atribut yang menyimpan data dari InstructionRegister
+    private Bit4 data;
+  
   // Atribut yang menyimpan nilai [Cp,Ep,Lm',CE'],[Li',Ei',La',Ea],[Su,Eu,Lb',Lo']  
     private int[] bits;
     
     public ControlUnitSequencer() {
+        this.data = data;
         // Nilai awal bits = 0011 1110 0011
         int[] values = {0,0,1,1,1,1,1,0,0,0,1,1};
         bits = values;
@@ -50,6 +54,14 @@ public class ControlUnitSequencer{
             result+= String.valueOf(getBitsAt(i));
         }
         return result;
+    }
+  
+    public Bit4 getData() {
+        return data;
+    }
+
+    public void setData(Bit4 data) {
+        this.data = data;
     }
   
 }
