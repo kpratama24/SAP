@@ -1,33 +1,33 @@
 public class BRegister{
- private String bit; //menyimpan bit dari RAM
+ private String bit; // Save the bit from the RAM
  
  /**
-  * Konstraktor kelas BRegister
-  * @param bit input bit yang dimasukkan ke BRegister
+  * The class cnstructor of BufferRegister
+  * @param bit the bit input that will be enetered to BufferRegister
   */
  public BRegister(String bit){
-  this.bit=bit;
+   this.bit=bit;
  }
 
  /**
-  * Getter untuk atribut bit
-  * @return nilai bit dalam string
+  * Getter for the bit attributes
+  * @return the bit value in the form of String data type
   */
  public String getBit(){
   return this.bit;
  }
 
  /**
-  * Setter untuk atribut bit
-  * @param bit input bit yang diset ke atribut bit
+  * Setter for the bit attributes
+  * @param bit input that will be applied to the bit attributes
   */
  public void setBit(String bit){
   this.bit=bit;
  }
 
  /**
-  * Getter untuk mengembalikan bit dalam bentuk desimal
-  * @return bit dalam desimal
+  * getter for restoring the bit type to decimal number
+  * @return the bit in a form of decimal number
   */
  public int getBitToDecimal(){
   Bit bits=new Bit(bit);
