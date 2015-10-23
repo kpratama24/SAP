@@ -1,6 +1,31 @@
 public class MemoryAddressRegister{
     
     private Bit4 data;
+    
+    /**
+     * Constructor for class MemoryAddressRegister
+     * @param data input value for the data attribute
+     */
+    public MemoryAddressRegister(Bit4 data) {
+        this.data = data;
+    }
+
+    /**
+     * Method for get the data in Bit8
+     * @return the data in Bit8
+     */
+    public Bit8 getDataInBit8() {
+        return this.convertToBit8();
+    }
+    
+    /**
+     * Method for converting the data into a Bit8
+     * @return the data in Bit8
+     */
+    private Bit8 convertToBit8() {
+        int result = this.data.toDecimal();
+        return new Bit8(result);
+    }
 
   /**
    * Setter for the data
