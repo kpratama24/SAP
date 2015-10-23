@@ -13,6 +13,7 @@ public class SAPSimulator{
   public SAPSimulator(String[] memory){
     // create objects for registers
     pc=new ProgramCounter();
+    cu=new ControlUnitSequencer();
     ram=new RandomAccessMemory(memory);
   }
   
@@ -20,5 +21,15 @@ public class SAPSimulator{
     // simulation
     
     // Initial state - T0
+    cu.setState(0);
+    
+    // Address state - T1
+    cu.setState(1);
+    
+    // Increment state - T2
+    cu.setState(2);
+    
+    // Memory state - T3
+    cu.setState(3);
   }
 }
