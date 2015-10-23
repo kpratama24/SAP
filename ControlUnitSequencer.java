@@ -82,5 +82,21 @@ public class ControlUnitSequencer{
     public void setData(Bit4 data) {
         this.data = data;
     }
-  
+    
+    public void setState(int tx){
+      switch(tx){
+        case 0:
+          bits=INITIAL_STATE;
+          break;
+        case 1:
+          bits=ADDRESS_STATE;
+          break;
+        case 2:
+          bits=INCREMENT_STATE;
+          break;
+        case 3:
+          bits=MEMORY_STATE;
+          break;
+      }
+    }
 }
