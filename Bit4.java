@@ -1,11 +1,12 @@
 /**
- * Kelas yang merepresentasikan 4 bit angka biner
+ * Class that represent 4 bit of binary number
  */
 public class Bit4 extends Bit{
   
   /**
-   * Constructor kelas Bit4
-   * @param value string biner 4 bit
+   * Bit4 Class Constructor
+   * this Constructor will override the value of "value" at the bit class
+   * @param value 4Bit binary in the form of String data type
    */
   public Bit4(String value){
     super(value);
@@ -13,7 +14,7 @@ public class Bit4 extends Bit{
   
   /**
    * Constructor kelas Bit4
-   * @param value bilangan desimal sebagai data 4 bit
+   * @param value the decimal number as the Bit4 data type
    */
   public Bit4(int value){
     super(value,4);
