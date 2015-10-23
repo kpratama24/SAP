@@ -1,15 +1,15 @@
 /**
- * Kelas yang merepresentasikan 1 bit angka biner
+ * class thart represent 1 bit of number
  */
 public class Bit{
   
   /**
-   * Nilai yang direpresentasikan dengan biner 1 bit
+   * Value tha represented by a 1bit String
    */
   protected String value;
   
   /**
-   * Constructor kelas Bit
+   * Class constructor
    * @param bilangan biner sebagai data
    */
   public Bit(String value){
@@ -17,16 +17,16 @@ public class Bit{
   }
   
   /**
-   * Constructor kelas Bit
-   * @param value bilangan desimal sebagai data
-   * @param bitLength panjang bit bilangan biner
+   * Class constructor
+   * @param value decimal value as the data
+   * @param bitLength the length of the bit
    */
   public Bit(int value,int bitLength){
     this.value=this.toBinary(value,bitLength);
   }
   
   /**
-   * Method getter atribut value
+   * Getter for the value
    * @return string berupa bilangan biner
    */
   public String getValue(){
@@ -34,7 +34,7 @@ public class Bit{
   }
   
   /**
-   * Method setter untuk atribut value
+   * Setter for the value attributes
    * @param value bilangan biner baru
    */
   public void setValue(String value){
@@ -42,8 +42,8 @@ public class Bit{
   }
   
   /**
-   * Method untuk mengubah bilangan biner ke bilangan desimal
-   * @return nilai desimal dari bilangan biner yang ada
+   * Method to change the decimal number to binary number
+   * @return the decimal number of the given binary number
    */
   public int toDecimal(){
     int res=0;
@@ -56,10 +56,10 @@ public class Bit{
   }
   
   /**
-   * Method untuk mengubah bilangan desimal ke bilangan biner
-   * @param val bilangan desimal yang akan diubah ke biner
-   * @param bitLength panjang bilangan biner
-   * @return string berupa bilangan biner dari bilangan desimal yang diberikan oleh user
+   * Method to change the decimal number to binary number
+   * @param val decimal number that will be changed top binary number
+   * @param bitLength the length of binary number
+   * @return String value that represent the binary number of the decimal that has been provided by the user
    */
   public String toBinary(int val,int bitLength){
     String str="";
