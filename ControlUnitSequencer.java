@@ -69,8 +69,8 @@ public class ControlUnitSequencer{
     public String toString() {
         String result = "";
         for (int i=0; i<bits.length; i++){
-            result+= String.valueOf(getBitsAt(i));
-            // result+= bits[i]+"";
+            //result+= String.valueOf(getBitsAt(i));
+            result+= bits[i]+"";
         }
         return result;
     }
@@ -96,6 +96,15 @@ public class ControlUnitSequencer{
           break;
         case 3:
           bits=MEMORY_STATE;
+          break;
+        case 4:
+          if(this.data.toDecimal()==0){// instruksi LDA
+            
+          }
+          break;
+        case 5:
+          break;
+        case 6:
           break;
       }
     }
