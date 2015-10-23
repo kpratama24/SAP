@@ -1,11 +1,23 @@
 
 public class ControlUnitSequencer{
   
-  // Atribut yang menyimpan data dari InstructionRegister
+  // Atribut yang menyimpan data instruksi dari InstructionRegister
     private Bit4 data;
   
-  // Atribut yang menyimpan nilai [Cp,Ep,Lm',CE'],[Li',Ei',La',Ea],[Su,Eu,Lb',Lo']  
+  // Atribut yang menyimpan nilai [Cp,Ep,Lm',CE'],[Li',Ei',La',Ea],[Su,Eu,Lb',Lo'] pada kondisi terakhir
     private int[] bits;
+    
+    // Konstanta yang menyimpan nilai awal Control Unit (pada T0)
+    private final static int[] INITIAL_STATE={0,0,1,1,1,1,1,0,0,0,1,1};
+    
+    //Konstanta yang menimpan nilai Control Unit pada kondisi T1 (address state)
+    private final static int[] ADDRESS_STATE={0,1,0,1,1,1,1,0,0,0,1,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T2 (increment state)
+    private final static int[] INCREMENT_STATE={1,0,1,1,1,1,1,0,0,0,1,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T3 (memory state)
+    private final static int[] MEMORY_STATE={0,0,1,0,0,1,1,0,0,0,1,1};
     
     public ControlUnitSequencer(Bit4 data) {
         this.data = data;
@@ -58,6 +70,7 @@ public class ControlUnitSequencer{
         String result = "";
         for (int i=0; i<bits.length; i++){
             result+= String.valueOf(getBitsAt(i));
+            // result+= bits[i]+"";
         }
         return result;
     }
