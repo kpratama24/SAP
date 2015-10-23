@@ -48,4 +48,36 @@ public class ALU {
         return new Bit8(result);
     }
     
+    /**
+     * Getter untuk atribut ACCData
+     * @return ACCData dengan tipe Bit8
+     */
+    public Bit8 getACCData() {
+        return ACCData;
+    }
+
+    /**
+     * Setter untuk atribut ACCData
+     * @param ACCData input bertipe Bit8 untuk masukan atribut ACCData
+     */
+    public void setACCData(Bit8 ACCData) {
+        this.ACCData = ACCData;
+    }
+
+    /**
+     * Getter untuk atribut BRegData
+     * @return BRegData dengan tipe Bit8
+     */
+    public Bit8 getBRegData() {
+        return BRegData;
+    }
+
+    /**
+     * Setter untuk atribut BRegData
+     * @param BRegData input bertipe Bit8 untuk masukan atribut BRegData
+     */
+    public void setBRegData(Bit8 BRegData) {
+        this.BRegData = BRegData;
+    }
+    
 }
