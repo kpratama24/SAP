@@ -2,6 +2,10 @@ public class RandomAccessMemory{
     private Memory[] memory;
     private Bit8 data;
 
+    /**
+     * Class constructor for the RAM
+     * @param memory an array that store the memory string
+     */
     public RandomAccessMemory(String[] memory) {
         this.memory = new Memory[16];
         for (int i = 0; i < 16; i++) {
@@ -12,23 +16,39 @@ public class RandomAccessMemory{
         }
     }
 
+    /**
+    * Setter for the data
+    * @param bit4 the Bit4 data taht will be changed to decimal number
+    */
     public void setData(Bit4 bit4) {
         this.data = this.memory[bit4.toDecimal()].getData();
     }
 
+    /**
+     * Getter for the data
+     * @return the data value
+     */
     public Bit8 getData() {
         return this.data;
     }
     
+    /**
+     * Getter for the data in the form of Bit8 data type
+     * @return new data generated from Bit8 Class
+     */
     private Bit8 getData() {
             return new Bit8(this.data);
         }
     }
 
+    
     private class Memory {
 
         private final Bit8 data;
 
+        /** Class constructor
+         *  @param data the data taht will be created  based on Bit* data type
+         */
         private Memory(String data) {
             this.data = new Bit8(data);
         }
