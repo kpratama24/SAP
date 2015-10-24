@@ -52,4 +52,7 @@ public class RandomAccessMemory{
         private Memory(String data) {
             this.data = new Bit8(data);
         }
+        private Bit8 getData(){
+            return this.data;
+        }
 }
