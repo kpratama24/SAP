@@ -3,8 +3,8 @@
  * @Author Github
  */
 public class Main{
-
-    String[] memory = new String[16];
+    public static void main (String args[]){
+        String[] memory = new String[16];
         memory[0] = "00001001";
         memory[1] = "00011010";
         memory[2] = "00011011";
@@ -23,4 +23,5 @@ public class Main{
         memory[15] = "00000000";
         SAPSimulator simulator = new SAPSimulator(memory);
         simulator.start();
+    }
 }
