@@ -19,7 +19,9 @@ public class ProgramCounter{
    * Method to add the counter
    */
   public void countUp(){
-    this.count=this.count.setValue(this.count.toBinary(this.count.toDecimal()+1,4));
+    //this.count=
+    //add error, "void cannot be converted to Bit4"
+    this.count.setValue(this.count.toBinary(this.count.toDecimal()+1,4));
   }
   
   /**
