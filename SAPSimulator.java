@@ -15,6 +15,13 @@ public class SAPSimulator{
     pc=new ProgramCounter();
     cu=new ControlUnitSequencer();
     ram=new RandomAccessMemory(memory);
+    acc=new Accumulator(null);
+    bReg=new BRegister(null);
+    binDisplay=new BinaryDisplay();
+    ir=new InstructionRegister(new Bit8(memory[0]));
+    mar=new MemoryAddressRegister(null);
+    or=new OutputRegister();
+    alu=new ALU(acc,bReg);
   }
   
   public void start(){
@@ -31,5 +38,11 @@ public class SAPSimulator{
     
     // Memory state - T3
     cu.setState(3);
+    
+    // State T4 depends on command (LDA, ADD, SUB, OUT, HLT)
+    
+    // State T5 depends on command (LDA, ADD, SUB, OUT, HLT)
+    
+    // State T6 depends on command (LDA, ADD, SUB, OUT, HLT)
   }
 }
