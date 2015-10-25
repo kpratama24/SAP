@@ -19,6 +19,12 @@ public class InstructionRegister {
         this.opCode = new Bit4(input.getValue().substring(0,4));
         this.operand = new Bit4(input.getValue().substring(4));
     }
+    
+    public InstructionRegister(){
+        this.ramData=null;
+        this.opCode=null;
+        this.operand=null;
+    }
 
     /**
     * Getter for the opCode
