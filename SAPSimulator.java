@@ -15,13 +15,13 @@ public class SAPSimulator{
     pc=new ProgramCounter();
     cu=new ControlUnitSequencer();
     ram=new RandomAccessMemory(memory);
-    acc=new Accumulator(null);
-    bReg=new BRegister(null);
+    acc=new Accumulator();
+    bReg=new BRegister();
     binDisplay=new BinaryDisplay();
-    ir=new InstructionRegister(new Bit8(memory[0]));
-    mar=new MemoryAddressRegister(null);
+    ir=new InstructionRegister();
+    mar=new MemoryAddressRegister();
     or=new OutputRegister();
-    alu=new ALU(acc,bReg);
+    alu=new ALU();
   }
   
   public void start(){
