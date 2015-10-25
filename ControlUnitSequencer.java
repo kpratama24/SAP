@@ -19,6 +19,24 @@ public class ControlUnitSequencer{
     // Konstanta yang menyimpan nilai Control Unit pada kondisi T3 (memory state)
     private final static int[] MEMORY_STATE={0,0,1,0,0,1,1,0,0,0,1,1};
     
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T4 untuk LDA, ADD, dan SUB
+    private final static int[] GET_RAM_VALUE={0,0,0,1,1,0,1,0,0,0,1,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T4 untuk OUT
+    private final static int[] ACC_TO_OR={0,0,1,1,1,1,1,1,0,0,1,0};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T5 untuk LDA
+    private final static int[] RAM_TO_ACC={0,0,1,0,1,1,0,0,0,0,1,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T5 untuk ADD dan SUB
+    private final static int[] RAM_TO_BREG={0,0,1,0,1,1,1,0,0,0,0,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T6 untuk ADD
+    private final static int[] ADD_STATE={0,0,1,1,1,1,0,0,0,1,1,1};
+    
+    // Konstanta yang menyimpan nilai Control Unit pada kondisi T6 untuk SUB
+    private final static int[] SUB_STATE={0,0,1,1,1,1,0,0,1,1,1,1};
+    
     public ControlUnitSequencer(Bit4 data) {
         this.data = data;
         // Nilai awal bits = 0011 1110 0011
@@ -101,10 +119,52 @@ public class ControlUnitSequencer{
           if(this.data.toDecimal()==0){// instruksi LDA
             
           }
+          else if(this.data.toDecimal()==1){// instruksi ADD
+            
+          }
+          else if(this.data.toDecimal()==2){// instruksi SUB
+            
+          }
+          else if(this.data.toDecimal()==14){// instruksi OUT
+            
+          }
+          else{// instruksi HLT
+            
+          }
           break;
         case 5:
+          if(this.data.toDecimal()==0){// instruksi LDA
+            
+          }
+          else if(this.data.toDecimal()==1){// instruksi ADD
+            
+          }
+          else if(this.data.toDecimal()==2){// instruksi SUB
+            
+          }
+          else if(this.data.toDecimal()==14){// instruksi OUT
+            
+          }
+          else{// instruksi HLT
+            
+          }
           break;
         case 6:
+          if(this.data.toDecimal()==0){// instruksi LDA
+            
+          }
+          else if(this.data.toDecimal()==1){// instruksi ADD
+            
+          }
+          else if(this.data.toDecimal()==2){// instruksi SUB
+            
+          }
+          else if(this.data.toDecimal()==14){// instruksi OUT
+            
+          }
+          else{// instruksi HLT
+            
+          }
           break;
       }
     }
