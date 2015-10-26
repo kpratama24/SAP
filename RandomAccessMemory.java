@@ -15,12 +15,12 @@ public class RandomAccessMemory{
             }
         }
     }
-
+    
     /**
     * Setter for the data
     * @param bit4 the Bit4 data taht will be changed to decimal number
     */
-    public void setData(Bit4 bit4) {
+    private void setData(Bit4 bit4) {
         this.data = this.memory[bit4.toDecimal()].getData();
     }
 
@@ -28,7 +28,7 @@ public class RandomAccessMemory{
      * Getter for the data
      * @return the data value
      */
-    public Bit8 getData() {
+    private Bit8 getData() {
         return this.data;
     }
     
@@ -40,7 +40,10 @@ public class RandomAccessMemory{
             return new Bit8(this.data);
         }
     }
-
+    public Bit8 getFromMemory(Bit4 index){
+        setData(index);
+        return getData();
+    }
     
     private class Memory {
 
