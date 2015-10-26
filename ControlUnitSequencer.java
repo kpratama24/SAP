@@ -87,7 +87,6 @@ public class ControlUnitSequencer{
     public String toString() {
         String result = "";
         for (int i=0; i<bits.length; i++){
-            //result+= String.valueOf(getBitsAt(i));
             result+= bits[i]+"";
         }
         return result;
@@ -117,53 +116,53 @@ public class ControlUnitSequencer{
           break;
         case 4:
           if(this.data.toDecimal()==0){// instruksi LDA
-            
+            bits=GET_RAM_VALUE;
           }
           else if(this.data.toDecimal()==1){// instruksi ADD
-            
+            bits=GET_RAM_VALUE;
           }
           else if(this.data.toDecimal()==2){// instruksi SUB
-            
+            bits=GET_RAM_VALUE;
           }
           else if(this.data.toDecimal()==14){// instruksi OUT
-            
+            bits=ACC_TO_OR;
           }
           else{// instruksi HLT
-            
+            bits=INITIAL_STATE;
           }
           break;
         case 5:
           if(this.data.toDecimal()==0){// instruksi LDA
-            
+            bits=RAM_TO_ACC;
           }
           else if(this.data.toDecimal()==1){// instruksi ADD
-            
+            bits=RAM_TO_BREG;
           }
           else if(this.data.toDecimal()==2){// instruksi SUB
-            
+            bits=RAM_TO_BREG;
           }
           else if(this.data.toDecimal()==14){// instruksi OUT
-            
+            bits=INITIAL_STATE;
           }
           else{// instruksi HLT
-            
+            bits=INITIAL_STATE;
           }
           break;
         case 6:
           if(this.data.toDecimal()==0){// instruksi LDA
-            
+            bits=INITIAL_STATE;
           }
           else if(this.data.toDecimal()==1){// instruksi ADD
-            
+            bits=ADD_STATE;
           }
           else if(this.data.toDecimal()==2){// instruksi SUB
-            
+            bits=SUB_STATE;
           }
           else if(this.data.toDecimal()==14){// instruksi OUT
-            
+            bits=INITIAL_STATE;
           }
           else{// instruksi HLT
-            
+            bits=INITIAL_STATE;
           }
           break;
       }
