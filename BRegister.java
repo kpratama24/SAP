@@ -1,13 +1,5 @@
 public class BRegister{
  private Bit8 data; // Save the bit from the RAM
- 
- /**
-  * The class cnstructor of BufferRegister
-  * @param bit the bit input that will be enetered to BufferRegister
-  */
- public BRegister(Bit8 bit){
-   this.data = bit;
- }
 
  /**
   * Getter for the data attributes
