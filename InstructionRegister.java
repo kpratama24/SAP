@@ -65,4 +65,15 @@ public class InstructionRegister {
     public void setRAMData(Bit8 newData){
         this.ramData=newData;
     }
+    
+    /**
+     * Method ini mengembalikan nilai dari ramData
+     * @return nilai ramData dalam biner jika tidak null, XXXXXXXX jika null
+     */
+	public String toString(){
+      if(this.ramData!=null){
+          return this.ramData.getValue();
+      }
+      return "XXXXXXXX";
+  }
 }
