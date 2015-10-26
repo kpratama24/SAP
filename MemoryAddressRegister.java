@@ -13,7 +13,8 @@ public class MemoryAddressRegister{
     }
 
     /**
-     * 
+     * Method untuk mendapatkan isi ram
+     * @return mengembalikan isi ram dalam Bit8
      */
     public Bit8 getRam(){
         return ram.getFromMemory(data);
