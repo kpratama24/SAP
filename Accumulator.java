@@ -1,10 +1,6 @@
 public class Accumulator{
   private Bit8 data;
   
-  public Accumulator(Bit8 data) {
-        this.data = data;
-    }
-
   public void setData(Bit8 data) {
       this.data = data;
   }
