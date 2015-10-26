@@ -64,6 +64,8 @@ public class InstructionRegister {
     
     public void setRAMData(Bit8 newData){
         this.ramData=newData;
+        setOpCode(new Bit4(newData.getValue().substring(0, 4)));
+        setOperand(new Bit4(newData.getValue().substring(4)));
     }
     
     /**
