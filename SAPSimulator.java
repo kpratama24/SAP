@@ -24,37 +24,48 @@ public class SAPSimulator{
     alu=new ALU();
   }
   
-  public void start(PrintStream out){
+   public void start(PrintStream out){
     // simulation
     
     // Initial state - T0
     cu.setState(0);
+    out.println("T0");
     out.println(this);
     
     // Address state - T1
     cu.setState(1);
+    out.println("T1");
     mar.setData(pc.getCount());
     out.println(this);
     
     // Increment state - T2
     cu.setState(2);
+    out.println("T2");
     pc.countUp();
     out.println(this);
     
     // Memory state - T3
     cu.setState(3);
-    ir.setRAMData(mar.getRAM());
+    out.println("T3");
+    ir.setRAMData(mar.getRam());
     out.println(this);
     
     // Memory state - T4
     cu.setState(4);
-    
+    out.println("T4");
+    mar.setData(ir.getOperand());
+    out.println(this);
     
     // Memory state - T5
     cu.setState(5);
+    out.println("T5");
+    acc.setData(ram.getFromMemory(mar.getData()));
+    out.println(this);
     
     // Memory state - T6
     cu.setState(6);
+    out.println("T6");
+    out.println(this);
   }
   
   public String toString(){
