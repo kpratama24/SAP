@@ -21,7 +21,16 @@ public class Main{
         memory[13] = "00100000";
         memory[14] = "00000000";
         memory[15] = "00000000";
+        
+        System.out.println("RAM:");
+        for(int i=0;i<16;i++){
+            System.out.println(memory[i].substring(0,4)+" "+memory[i].substring(4));
+        }
+        System.out.println();
+        
+        
+        System.out.println("Simulation:");
         SAPSimulator simulator = new SAPSimulator(memory);
-        simulator.start();
+        simulator.start(System.out);
     }
 }
