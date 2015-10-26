@@ -5,11 +5,6 @@ public class ALU {
 
 // Atribut yang menyimpan bit yang didapat dari Accumulator dan BRegister
     private Bit8 ACCData, BRegData;
-
-    public ALU(Accumulator acc, BRegister br) {
-        this.ACCData = acc.getData();
-        this.BRegData = br.getData();     
-    }
     
     /**
      * method untuk melakukan operasi penjumlahan atau pengurangan
