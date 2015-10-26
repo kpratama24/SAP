@@ -37,8 +37,7 @@ public class RandomAccessMemory{
      * @return new data generated from Bit8 Class
      */
     private Bit8 getData() { //error, getData() already defined (diatas)
-            return new Bit8(this.data);
-        }
+        return new Bit8(this.data);
     }
     public Bit8 getFromMemory(Bit4 index){
         setData(index);
@@ -58,4 +57,5 @@ public class RandomAccessMemory{
         private Bit8 getData(){
             return this.data;
         }
+    }
 }
