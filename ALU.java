@@ -75,4 +75,14 @@ public class ALU {
         this.BRegData = BRegData;
     }
     
+    /**
+     * Method ini mengembalikan nilai dari hasil calculate
+     * @return hasil calculate jika ACCData & BRegData tidak null, XXXXXXXX jika null
+     */
+    public String toString(){
+      if(this.ACCData!=null && BRegData!=null){
+          return this.calculate().getValue();
+      }
+      return "XXXXXXXX";
+  }
 }
