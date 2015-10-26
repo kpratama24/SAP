@@ -1,13 +1,22 @@
 public class MemoryAddressRegister{
     
     private Bit4 data;
+    private RandomAccessMemory ram;
     
     /**
      * Constructor for class MemoryAddressRegister
-     * @param data input value for the data attribute
+     * @param ram input isi dari ram
      */
-    public MemoryAddressRegister(Bit4 data) {
-        this.data = data;
+    public MemoryAddressRegister(RandomAccessMemory ram) {
+        this.data = null;
+        this.ram=ram;
+    }
+
+    /**
+     * 
+     */
+    public Bit8 getRam(){
+        return ram.getFromMemory(data);
     }
 
     /**
