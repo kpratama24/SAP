@@ -36,7 +36,7 @@ public class RandomAccessMemory{
      * Getter for the data in the form of Bit8 data type
      * @return new data generated from Bit8 Class
      */
-    private Bit8 getData() {
+    private Bit8 getData() { //error, getData() already defined (diatas)
             return new Bit8(this.data);
         }
     }
