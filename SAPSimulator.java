@@ -1,3 +1,5 @@
+import java.io.PrintStream;
+
 public class SAPSimulator{
   private ALU alu;
   private Accumulator acc;
@@ -19,7 +21,7 @@ public class SAPSimulator{
     bReg=new BRegister();
     binDisplay=new BinaryDisplay();
     ir=new InstructionRegister();
-    mar=new MemoryAddressRegister();
+    mar=new MemoryAddressRegister(ram);
     or=new OutputRegister();
     alu=new ALU();
   }
@@ -35,7 +37,7 @@ public class SAPSimulator{
     // Address state - T1
     cu.setState(1);
     out.println("T1");
-    mar.setData(pc.getCount());
+    mar.setData(pc.getCtMar());
     out.println(this);
     
     // Increment state - T2
@@ -51,9 +53,10 @@ public class SAPSimulator{
     out.println(this);
     
     // Memory state - T4
+    mar.setData(ir.getOperand());
+    cu.setData(ir.getOpCode());
     cu.setState(4);
     out.println("T4");
-    mar.setData(ir.getOperand());
     out.println(this);
     
     // Memory state - T5
