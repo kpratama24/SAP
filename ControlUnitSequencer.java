@@ -1,67 +1,68 @@
 
 public class ControlUnitSequencer{
   
-  // Atribut yang menyimpan data instruksi dari InstructionRegister
+  // Attributes that store data instructions from InstructionRegister
     private Bit4 data;
   
-  // Atribut yang menyimpan nilai [Cp,Ep,Lm',CE'],[Li',Ei',La',Ea],[Su,Eu,Lb',Lo'] pada kondisi terakhir
+  // Attribute that stores the value of [ Cp , Ep , Lm ' CE ' ] , [ Li ' Ei ' , La ' , Ea ] , [ Su , Eu , Lb ' Lo '] on the last condition
     private int[] bits;
     
-    // Konstanta yang menyimpan nilai awal Control Unit (pada T0)
+    // The constant that stores the initial value Control Unit ( at T0 )
     private final static int[] INITIAL_STATE={0,0,1,1,1,1,1,0,0,0,1,1};
     
-    //Konstanta yang menimpan nilai Control Unit pada kondisi T1 (address state)
+    //Constants that you store the value of the Control Unit on the condition T1 ( state address )
     private final static int[] ADDRESS_STATE={0,1,0,1,1,1,1,0,0,0,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T2 (increment state)
+    // The constant that holds the value of the Control Unit on the condition T2 ( increment state )
     private final static int[] INCREMENT_STATE={1,0,1,1,1,1,1,0,0,0,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T3 (memory state)
+    // The constant that holds the value of the Control Unit in the T3 condition (memory state)
     private final static int[] MEMORY_STATE={0,0,1,0,0,1,1,0,0,0,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T4 untuk LDA, ADD, dan SUB
+    // The constant that holds the value of the Control Unit at T4 condition for LDA , ADD and SUB
     private final static int[] GET_RAM_VALUE={0,0,0,1,1,0,1,0,0,0,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T4 untuk OUT
+    // The constant that holds the value of the Control Unit at T4 condition for OUT
     private final static int[] ACC_TO_OR={0,0,1,1,1,1,1,1,0,0,1,0};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T5 untuk LDA
+    // The constant that holds the value of the Control Unit on the conditions of T5 to LDA
     private final static int[] RAM_TO_ACC={0,0,1,0,1,1,0,0,0,0,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T5 untuk ADD dan SUB
+    // The constant that holds the value of the Control Unit on the  of T5 for ADD and SUB 
     private final static int[] RAM_TO_BREG={0,0,1,0,1,1,1,0,0,0,0,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T6 untuk ADD
+    // The constant that holds the value of the Control Unit in the T6 condition for ADD
     private final static int[] ADD_STATE={0,0,1,1,1,1,0,0,0,1,1,1};
     
-    // Konstanta yang menyimpan nilai Control Unit pada kondisi T6 untuk SUB
+    // The constant that holds the value of the Control Unit in the T6 condition for SUB
     private final static int[] SUB_STATE={0,0,1,1,1,1,0,0,1,1,1,1};
     
     public ControlUnitSequencer(Bit4 data) {
         this.data = data;
-        // Nilai awal bits = 0011 1110 0011
+        // first value bits = 0011 1110 0011
         int[] values = {0,0,1,1,1,1,1,0,0,0,1,1};
         bits = values;
     }
     
     public ControlUnitSequencer() {
-        // Nilai awal bits = 0011 1110 0011
+        // first value bits = 0011 1110 0011
         int[] values = {0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1};
         bits = values;
     }
     
     /**
-     * Method untuk mendapatkan nilai dari atribut bits
-     * @param index posisi nilai yang dicari
-     * @return nilai dari bits ke-[index]
+     * Method for get value from atribut bits
+     * @param index of position search
+     * @return value from index-...
      */
     public int getBitsAt(int index) {
         return bits[index];
     }
     
     /**
-     * Method untuk mengubah nilai dari atribut bits
-     * @param index posisi nilai yang ingin diubah
+     * Method for change value from atribut bits
+     * @param value position index want to change
+     * @return void
      */
     private void changeValueAt(int index) {
         switch(getBitsAt(index)) {
@@ -75,9 +76,8 @@ public class ControlUnitSequencer{
     }
         
     /**
-     * Method untuk melakukan set nilai dari atribut bits
-     * @param index posisi nilai yang ingin di set
-     * @param input nilai untuk bits ke-[index]
+     * Method for set a value from atribut bits
+     * @param alue position index want to set and input for bit.
      */    
     private void setValueAt(int index, int input) {
         bits[index] = input;
