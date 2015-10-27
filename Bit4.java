@@ -13,7 +13,7 @@ public class Bit4 extends Bit{
   }
   
   /**
-   * Constructor kelas Bit4
+   * Constructor class Bit4
    * @param value the decimal number as the Bit4 data type
    */
   public Bit4(int value){
