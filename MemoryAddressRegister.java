@@ -13,8 +13,8 @@ public class MemoryAddressRegister{
     }
 
     /**
-     * Method untuk mendapatkan isi ram
-     * @return mengembalikan isi ram dalam Bit8
+     * Method for get ram data
+     * @return ram data
      */
     public Bit8 getRam(){
         return ram.getFromMemory(data);
@@ -54,8 +54,8 @@ public class MemoryAddressRegister{
     }
     
     /**
-     * Method ini mengembalikan nilai dari data
-     * @return nilai data dalam biner jika tidak null, XXXXXXXX jika null
+     * Method return a data value if data is not null.
+     * @return data value
      */
 	public String toString(){
       if(data!=null){
