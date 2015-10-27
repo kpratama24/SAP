@@ -59,11 +59,11 @@ public class ProgramCounter{
     this.ctMar = ctMar;
   }
   
-  /**
-   * Method ini mengembalikan nilai dari data
-   * @return nilai data dalam biner jika tidak null, XXXXXXXX jika null
-   */
-	public String toString(){
+   /**
+     * Method return a data value if data is not null.
+     * @return data value
+     */
+  public String toString(){
     if(count!=null){
       return this.count.getValue();
     }
