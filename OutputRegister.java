@@ -18,9 +18,9 @@ public class OutputRegister{
    }
 
    /**
-    * Method ini mengembalikan nilai dari data
-    * @return nilai data dalam biner jika tidak null, XXXXXXXX jika null
-    */
+     * Method return a data value if data is not null.
+     * @return data value
+     */
 	public String toString(){
       if(data!=null){
           return this.data.getValue();
