@@ -23,8 +23,8 @@ public class BinaryDisplay{
   }
   
   /**
-     * Method ini mengembalikan nilai dari data
-     * @return nilai data dalam biner jika tidak null, XXXXXXXX jika null
+     * this methode return a data of Bit8 to a string type if data is not null.
+     * @return Bit8 data in string type
      */
 	 public String toString(){
       if(data!=null){
